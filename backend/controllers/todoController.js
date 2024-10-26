@@ -30,7 +30,7 @@ exports.updateTodo = async (req, res) => {
   res.json(updatedTodo);
 };
 
-// delete to do item
+// Delete a todo
 exports.deleteTodo = async (req, res) => {
   const { id } = req.params;
   await Todo.findByIdAndDelete(id);
