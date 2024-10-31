@@ -29,10 +29,3 @@ exports.updateTodo = async (req, res) => {
   );
   res.json(updatedTodo);
 };
-
-// delete to do
-exports.deleteTodo = async (req, res) => {
-  const { id } = req.params;
-  await Todo.findByIdAndDelete(id);
-  res.json({ message: "Todo deleted successfully" });
-};
